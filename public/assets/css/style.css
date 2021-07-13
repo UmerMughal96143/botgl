@@ -1,0 +1,2090 @@
+@font-face {
+    font-family: "gilroy-bold";
+    src: url("../fonts/Gilroy-Bold.ttf");
+}
+@font-face {
+    font-family: "gilroy-semibold";
+    src: url("../fonts/Gilroy-SemiBold.ttf");
+}
+@font-face {
+    font-family: "gilroy-medium";
+    src: url("../fonts/Gilroy-Medium.ttf");
+}
+
+@font-face {
+    font-family: "gilroy-regular";
+    src: url("../fonts/Gilroy-Regular.ttf");
+}
+
+body h1 {
+    font-size: 24px;
+    line-height: 24px;
+    font-family: "gilroy-semibold";
+    color: #2b2523;
+}
+body h2 {
+    font-size: 18px;
+    line-height: 18px;
+    font-family: "gilroy-semibold";
+    color: #2b2523;
+}
+body h3 {
+    font-size: 18px;
+    font-family: "gilroy-semibold";
+}
+body P {
+    color: #9b9b9b;
+    font-size: 14px;
+    font-family: "gilroy-regular";
+}
+
+/* Top navigation */
+.top-nav {
+    background: #ffffff;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.123);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 8px 0px;
+}
+.top-nav .custom-btn:after{
+    content: url(../icons/u_navigator.svg);
+    padding-left: 7px;
+    width: 22px;
+    height: 22px;
+}
+
+.country-avatar img {
+    width: 30px;
+}
+.top-nav .stats {
+    display: flex;
+    flex-wrap: wrap;
+}
+.top-nav .dashboard-logo {
+    width: 120px;
+    height: 40px;
+}
+.top-nav .notification-icon {
+    width: 24px;
+}
+.top-nav .year-select {
+    border: none;
+    font-size: 16px;
+    padding: 0px 4px;
+    font-family: "gilroy-semibold";
+}
+.top-nav .switch-wrap span {
+    font-family: "gilroy-semibold";
+}
+.top-nav .switch span {
+    font-size: 10px;
+}
+.nav-side-items {
+    justify-content: flex-end;
+}
+/* .top-nav .nav-side-items div{
+    padding: 0px 3px;
+} */
+
+body .custom-btn {
+    background-color: #54358e;
+    color: #ffffff;
+    border-radius: 14px;
+    padding: 11px 26px;
+    border: none;
+    font-size: 18px;
+    font-family: "gilroy-semibold";
+}
+.custom-btn:focus{
+    box-shadow: none;
+}
+.top-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    align-items: center;
+    margin-bottom: 0px;
+    padding-left: 10px;
+}
+.top-nav ul li {
+    font-size: 12px;
+    padding: 0px 25px;
+    font-family: "gilroy-semibold";
+}
+.top-nav .dropdown-toggle::after {
+    display: none;
+}
+.top-nav .dropdown-toggle i {
+    font-size: 12px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 21px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+    background-color: #54358e;
+}
+
+.switch input:focus + .slider {
+    box-shadow: 0 0 1px #54358e;
+}
+
+.switch input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+.top-nav ul li i {
+    padding-right: 10px;
+}
+.success {
+    color: #39cd6e;
+}
+.danger {
+    color: #fb6167;
+}
+.container.ad-container {
+    max-width: 1366px;
+    margin: auto;
+}
+img {
+    width: 100%;
+}
+button:focus {
+    outline: none;
+}
+button {
+    cursor: pointer;
+}
+/* Side Nav*/
+.sidenav {
+    height: 86%;
+    width: 245px;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 20px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    margin-top: 90px;
+    border-radius: 20px;
+    margin-left: 16px;
+}
+.sidenav a {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 35px;
+    padding-right: 15px;
+    text-decoration: none;
+    display: block;
+    letter-spacing: 0.12px;
+    font-size: 16px;
+    font-family: "gilroy-semibold";
+    color: #9b9b9b;
+    display: flex;
+    align-items: center;
+}
+.sidenav a:hover{
+    color: #9b9b9b;
+    text-decoration: none;
+}
+.side-nav-overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 300;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: none;
+}
+.sidenav a svg{
+    margin-right: 16px;
+}
+.sidenav a.active {
+    color: #54358e;
+    border-right: 4px solid #54358e;
+}
+.sidenav a.active svg {
+    fill: #54358e;
+}
+.sidenav a i {
+    font-size: 16px;
+    width: 30px;
+    color: #9b9b9b;
+}
+.sidenav .custom-btn {
+    padding: 19px 12px;
+    font-size: 11px;
+    margin: 0px 18px;
+    color: #ffffff;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.sidenav a.custom-btn i {
+    color: #ffffff;
+}
+.sidenav a i.cross-icon {
+    position: absolute;
+    top: 10%;
+    right: 8px;
+}
+.sidenav .sidenav-close-btn{
+    background-color: #54358e;
+    color: #ffffff;
+}
+.sidenav .account-btn{
+    padding: 15px 45px;
+    margin: auto;
+}
+.sidenav a .circled-notification-numbers{
+    background: #54358E;
+    padding: 2px 10px;
+    border-radius: 50%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+/* Side Nav */
+
+/* Main Content */
+.main {
+    margin-left: 194px; /* Same as the width of the sidenav */
+    padding-bottom: 24px;
+}
+.main .main-profile-avatar-wrap img {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+}
+.main .main-profile-avatar-wrap h1 {
+    line-height: 26px;
+    padding-left: 26px;
+}
+.main .main-profile-avatar-wrap span {
+    font-size: 16px;
+    color: #9b9b9b;
+    font-family: "gilroy-regular";
+}
+.main .your-profit {
+    align-self: center;
+    display: block !important;
+}
+.box {
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 23px rgba(231, 232, 235, 0.25);
+    min-height: 100%;
+}
+.main .box-margin{
+    margin-bottom: 24px;
+}
+/* .box .total-available span{
+    font-size: 14px;
+} */
+.box span {
+    font-size: 14px;
+}
+.box .btc-value {
+    font-family: "gilroy-semibold";
+    font-size: 16px;
+}
+.progress-bar-wrap {
+    height: 4px;
+}
+.progress-bar-wrap .progress-bar {
+    height: 3px;
+    background-color: #54358e;
+}
+.percentage-change {
+    font-family: "gilroy-semibold";
+}
+.circled-percentage {
+    background: #effff6;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+.btc-dropdown {
+    background: none;
+    border: none;
+    font-family: "gilroy-semibold";
+    font-size: 14px;
+}
+span.badge {
+    padding: 6px 16px;
+    font-size: 14px;
+    font-family: "gilroy-semibold";
+}
+.badge-success {
+    background: #39cd6e;
+}
+.box .balance .total-available {
+    white-space: nowrap;
+}
+.box .balance .dollar-value span {
+    font-family: "gilroy-semibold";
+    font-size: 20px;
+}
+ .copy-to-clipboard img{
+    width: 18px;
+}
+.box span.clipboard-message{
+    font-family: "gilroy-semibold";
+}
+ .copy-to-clipboard{
+    width: 18px;
+}
+.box .bitcoin-wallet .code{
+    padding-top: 36px;
+    padding-bottom: 30px;
+}
+.box .qr-code {
+    width: 100px;
+    margin-left: auto;
+}
+.box .qr-code img {
+    width: 100px;
+}
+.box .btc-danger {
+    background: #fb6167;
+}
+.box.best-operation{
+    background: linear-gradient(to right, #ffffff 50%, #FAFEFF 50%);
+    padding-bottom: 0px; 
+}
+.box.best-operation h2{
+    padding-bottom: 44px;
+}
+.box.best-operation .custom-btn{
+    padding: 18px 55px;
+}
+.modal-one{
+   background-color: #54358e4f;
+}
+.modal-one h3{
+    font-size: 30px;
+    line-height: 30px;
+}
+.modal-one .percentage-change{
+    padding-bottom: 26px;
+} 
+.modal-one p{
+   color: #2B2523;
+   white-space: nowrap;
+}
+.modal-one .modal-content{
+    padding: 32px;
+    border-radius: 20px;
+}
+.modal-one .row p{
+    color: #9B9B9B;
+}
+.modal-one .modal-dialog{
+    max-width: 594px;
+} 
+.modal-one h3.sell{
+  padding-top: 16px;
+  padding-bottom: 48px;
+}
+.modal-one .modal-icon{
+    padding: 36px 0px;
+}
+.modal-one .modal-custom-footer{
+    padding-top: 19px;
+}
+.modal-one .cancel-btn{
+    background-color: #ffffff;
+    color: #54358e;
+    border: 1px solid #54358E;
+    font-size: 18px;
+}
+.modal-one .modal-content .modal-body{
+    max-width: 329px;
+    margin: auto;
+    padding: 0px;
+}
+.modal-one .cancel-btn{
+    margin-right: 36px;
+}
+.modal-one .modal-body h2 {
+    font-size: 36px;
+    line-height: 36px;
+}
+.modal-one .custom-btn{
+    padding: 13px 57px;
+    border-radius: 20px;
+    border: 1px solid #54358E;
+    font-size: 18px;
+}
+.box .card-sm-heading-space{
+    padding-bottom: 52px;
+}
+
+.box.financial-movements .row:not(:first-child){
+    padding: 25px 0px;
+}
+.box.top-five-exchange-buy h2{
+    padding-bottom: 46px;
+}
+.box.top-five-exchange-sell h2{
+    padding-bottom: 57px;
+}
+.box.best-operation h3 {
+    font-size: 36px;
+    font-family: "gilroy-semibold";
+    padding-top: 49px;
+}
+
+.box.best-operation .desc {
+    padding-bottom: 47px;
+    color: #9b9b9b;
+}
+.box.best-operation svg {
+    margin-top: 30px;
+}
+.box .profit-badge {
+    font-size: 20px;
+    padding: 12px 16px;
+}
+.box h2 {
+    margin-bottom: 0px;
+    white-space: nowrap;
+}
+.grey-text {
+    color: #9B9B9B;
+}
+.box .remaining-time {
+    font-size: 8px;
+    padding-left: 6px;
+}
+.box.capital-n-profit select {
+    font-size: 12px;
+    width: 80px;
+    border: none;
+    font-family: "gilroy-semibold";
+    color: #909090;
+}
+.box .profit-amount h3 {
+    padding-top: 18px;
+}
+.box .profit-amount span {
+    text-align: left;
+}
+span.chart-desc {
+    font-size: 14px;
+    color: #999999;
+}
+.theme-accent {
+    color: #54358e;
+}
+.main.home-content .financial-movements h2{
+    font-size: 14px;
+    color: #000000;
+}
+.main.home-content .box .code{
+    padding-top: 30px;
+    padding-bottom: 26px;
+}
+.main.home-content .financial-movements .success{
+    color: #39cd6e !important;
+    font-family: "gilroy-semibold";
+}
+.main.home-content .financial-movements .danger {
+    color: #fb6167 !important;
+    font-family: "gilroy-semibold";
+}
+.main.home-content .financial-movements span{
+    color: #4F4F4F;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+.main-logo img {
+    width: 180px;
+    margin-bottom: 40px;
+    margin-left: 15px;
+}
+
+/* Side Nav Stying */
+/* Top Profile bar */
+.profile-image {
+    width: 36px;
+    height: 36px;
+}
+.profile-image img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+.profile-dropdown select {
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+.profile-dropdown select:focus {
+    outline: none;
+}
+.profile-details {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 23px;
+}
+/* Top Profile bar */
+/* Body Area */
+.body-area {
+    padding-top: 92px;
+}
+/* Body Area */
+
+@media (max-width: 991px) {
+    .vl {
+        display: none;
+    }
+    .sidenav {
+        display: none;
+    }
+    .main {
+        margin-left: 0;
+    }
+    #mnbtn {
+        display: block;
+    }
+    .profile-details {
+        justify-content: space-between;
+    }
+}
+
+
+/* Run Trade  */
+.run-trade .box span{
+    font-size: 18px;
+    font-family: "gilroy-regular";
+}
+.run-trade .box h2{
+    font-family: "gilroy-semibold";
+    font-size: 24px;
+}
+.run-trade .percentage-change {
+    font-family: "poppins-light";
+}
+.run-trade .box {
+    background-color: #f8f9ff;
+    box-shadow: none;
+    min-height: auto;
+}
+.run-trade .box p span {
+    font-family: "gilroy-semibold";
+    font-size: 12px;
+}
+.run-trade .box p{
+    font-family: "gilroy-semibold";
+    font-size: 12px;
+}
+.run-trade .box .total-balance h3 span{
+    font-family: "gilroy-semibold";
+}
+.run-trade .runtrade-content {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 12px;
+}
+.run-trade .runtrade-content .desc p{
+    font-size: 18px;
+}
+.highlighted-stat {
+    background: #e7dcfc;
+    border-radius: 20px;
+}
+.run-trade .box .highlighted-stat span {
+    font-family: "gilroy-semibold";
+}
+.run-trade .box .row {
+    padding: 4px 0px;
+}
+.run-trade .purchase-sell-connect svg {
+    width: 30px;
+    margin-top: -20px;
+}
+.run-trade .runtrade-content .my-sell {
+    margin-top: -20px;
+}
+.run-trade .box.arbitration-values .circled-percentage{
+    margin-right: auto;
+    width: 80px;
+    height:80px;
+    background: #1DC75C;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'gilroy-semibold';
+}
+.run-trade .box.arbitration-values .btn-wrapper{
+   padding-top: 43px;
+   padding-bottom: 18px;
+   margin: auto;
+}
+.run-trade .box.arbitration-values .btn-wrapper .custom-btn{
+    border-radius: 20px;
+    font-size: 18px;
+}
+.run-trade .box.arbitration-values{
+    padding-bottom: 0px;
+}
+
+/* Run Trade  */
+
+/* Refferal Link */
+
+.main.refferal-link-page .custom-btn{
+    background: #773FE0;
+    padding: 9px 11px;
+    font-family: "gilroy-regular";
+    border-radius: 20px;
+    border: none;
+}
+.main.refferal-link-page .refferal-content  .currency-select-dropdown .dropdown-menu{
+    background-color: #F1F3FD;
+    border-radius: 20px;
+    margin-top: 6px;
+    border: none;
+}
+ .main.refferal-link-page .refferal-content  .currency-select-dropdown .dropdown-menu a{
+    color: #54358E;
+    font-family: 'gilroy-regular';
+    padding: 10px 26px;
+    font-size: 18px;
+} 
+.main.refferal-link-page .refferal-links .row{
+    padding: 10px 0px;
+}
+/* Refferal Link */
+
+/* My Trades */
+
+.my-trades .mytrade-content .desc p{
+    color: #2B2523;
+}
+.my-trades .box .percentage-change {
+    font-family: "gilroy-regular";
+}
+.my-trades .box span{
+    font-size: 18px;
+    font-family: 'gilroy-regular';
+}
+.my-trades .box{
+    max-width: 1174px;
+}
+.my-trades .box .details{
+    font-family: "gilroy-semibold";
+}
+.my-trades .box .details span{
+    cursor: pointer;
+}
+.my-trades .box .time span{
+    font-family: "gilroy-medium";
+}
+.my-trades .mytrade-table .row{
+    padding:16px 0px;
+}
+.modal-two .modal-dialog{
+    max-width: 808px;
+}
+.modal-two .modal-dialog .modal-content{
+    padding: 32px;
+    max-width: 808px;
+    border-radius: 20px;
+}
+.modal-two .buying-selling-stat{
+    max-width: 404px;
+    padding-top: 36px;
+}
+.modal-two .custom-btn{
+    border-radius: 20px;
+}
+.modal-two .close{
+    position: absolute;
+    top: 14px;
+    right: 14px;
+}
+.modal-two .close{
+    color: #000;
+    opacity: 1;
+}
+.modal-two .custom-btn{
+    padding: 13px 26px;
+}
+
+/* My Trades */
+
+/* Withdrawals */
+.withdrawals-page h1{
+    padding-bottom: 15px;
+    font-family: 'gilroy-bold';
+}
+.withdrawals-page .table-title h2 {
+    font-size: 24px;
+    line-height: 24px;
+    font-family: 'gilroy-bold';
+}
+.withdrawals-page h2{
+    font-size: 18px;
+}
+.withdrawals-page .total-balance{
+    background-color: #F8F9FF;
+    padding-top: 16px;
+    padding-left: 19px;
+    padding-bottom: 18px;
+    padding-right: 19px;
+    border-radius: 20px;
+}
+.withdrawals-page .total-balance h2{
+    padding-bottom: 16px;
+    font-family: "gilroy-bold";
+    font-size: 24px;
+}
+.withdrawals-page .withdrawal-table .custom-btn{
+    border-radius: 20px;
+}
+.withdrawals-page .withdrawal-table .row:not(:first-child) {
+    padding: 7px 0px;
+}
+.withdrawals-page .total-balance p span{
+    font-size: 18px;
+    color: #2B2523;
+    font-family: "gilroy-semibold";
+}
+.withdrawals-page .withdrawal-table span{
+    font-size: 18px;
+}
+.withdrawals-page .withdrawal-table .pending{
+    color: #9B9B9B;
+}
+.withdrawals-page form input{
+    padding: 21px 17px;
+    border-radius: 14px;
+}
+.withdrawals-page form label{
+    color: #4F4F4F;
+    font-size: 14px;
+}
+.withdrawals-page form input::placeholder{
+    color: #4F4F4F;
+    font-size: 14px;
+}
+.withdrawals-page form .sms-validation{
+    padding-right: 20px;
+}
+.withdrawals-page form .email-validation{
+    padding-left: 20px;
+}
+.withdrawals-page form p.desc{
+    padding-bottom: 63px;
+}
+.withdrawals-page form .request-code a:focus{
+    box-shadow: none;
+    outline: none;
+}
+.withdrawals-page form .custom-btn{
+    margin: auto;
+    border-radius: 20px;
+    font-family: "gilroy-medium";
+}
+.withdrawals-page form .request-code a{
+    padding: 21px 19px;
+    border-radius: 14px;
+    text-decoration: underline;
+}
+/* Withdrawals */
+/* Bot Page */
+.bot-page .percentage-change{
+    font-family: "gilroy-regular";
+}
+.bot-page .custom-accordion .card {
+    border: none;
+}
+.bot-page .custom-accordion .card .accordion-header .btn-link.collapsed:after{
+    display: block;
+    content: ' ';
+    background-image:url('../icons/u_angle-down.svg');
+    background-size: 28px 28px;
+    height: 28px;
+    width: 28px;
+    float: right;
+    transform: rotate(0deg);
+}
+.bot-page .custom-accordion .card .accordion-header .btn-link:after{
+    display: block;
+    content: ' ';
+    background-image:url('../icons/u_angle-down.svg');
+    background-size: 28px 28px;
+    height: 28px;
+    width: 28px;
+    float: right;
+    transform: rotate(180deg);
+}
+.bot-page .custom-accordion .card button{
+    text-decoration: none;
+    color: #2B2523;
+}
+.bot-page .custom-accordion .total-capital h2{
+    padding-bottom: 9px;
+    font-family: "gilroy-regular";
+}
+.bot-page .custom-accordion .custom{
+    background: #E7DCFC;
+    padding: 9px 10px;
+    border-radius: 20px;
+}
+.bot-page .custom-accordion .custom h2{
+    font-family: "gilroy-regular";
+}
+.bot-page .custom-accordion .card .card-header{
+    background: #ffffff;
+}
+.bot-page .custom-accordion .card{
+    border-radius: 20px;
+}
+.bot-page .slidecontainer {
+    width: 100%; /* Width of the outside container */
+    padding-top: 15px;
+}
+  
+.bot-page .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 10px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 20px;
+}
+/* Mouse-over effects */
+.bot-page .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+ /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+
+.bot-page .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 10px; /* Set a specific slider handle width */
+    height: 10px; /* Slider handle height */
+    background: #54358E; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 20px;
+}
+.bot-page .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+.bot-page .min-arbitrage{
+      padding-top: 12px;
+      padding-bottom: 24px;
+}
+.bot-page .operation-detail-title h2{
+    font-family: "gilroy-bold";
+}
+.modal-three .modal-dialog{
+    max-width: 417px;
+}
+.modal-three .modal-content{
+    border-radius: 20px;
+    padding-top: 32px;
+    padding-bottom: 24px;
+}
+.modal-three svg{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+.modal-three .custom-btn{
+    border-radius: 20px;
+}
+.modal-three .cancel-btn{
+    background: none;
+    color: #54358e;
+    border: 1px solid #54358e;
+    margin-left: 24px;
+}
+.modal-three .close{
+    color: #000;
+    opacity: 1;
+}
+/* Bot Page */
+
+/* transfers */
+.transfers .user-profile .row:not(:first-child){
+    padding:27px 0px ;
+}
+.transfers .drag-area{
+    background: #F1F3FD;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 24px 117px;
+    border-radius: 20px;
+}
+.transfers .drag-area-wrap{
+    border: 2px dashed #9B9B9B;
+    border-radius: 20px;
+    padding: 6px;
+}
+.transfers .drag-area.active{
+    border: 2px solid #fff;
+}
+.transfers .drag-area .icon{
+    font-size: 100px;
+    color: #fff;
+}
+.transfers .drag-area header{
+    font-size: 14px;
+    line-height: 16.98px;
+    font-family: "gilroy-medium";
+    color:  #9B9B9B;
+}
+.transfers .drag-area span{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0 15px 0;
+}
+.transfers .drag-area button{
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #5256ad;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.transfers .drag-area img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.transfers .validate-documents .input-area{
+    padding: 17px 0px;
+}
+.transfers .custom-btn{
+    border-radius: 20px;
+}
+.transfers .table-title h2{
+    font-size: 24px;
+    line-height: 24px;
+    padding-bottom: 9px;
+}
+.transfers input{
+    width: 225px;
+    padding: 21px 16px;
+    border-radius: 14px;
+}
+.transfers .activation-email .row{
+    padding: 12px 0px;
+}
+.transfers .activation-mobile{
+    margin-top: 20px;
+}
+.transfers .activation-mobile .row:not(:last-child){
+    padding: 12px 0px;
+}
+.transfers .activation-mobile .custom-btn{
+    margin-top: 24px;
+}
+.transfers .box{
+    min-height: auto;
+}
+.transfers .box .qr-code{
+    margin-right: auto;
+    margin-left: auto;
+}
+.transfers .box .qr-code img{
+    width: 169px;
+}
+.transfers .box .document-icon svg{
+    float: left;
+}
+.transfers .user-profile .custom-btn{
+    margin-top: 86px;
+}
+.transfers .user-profile label{
+    white-space: nowrap;
+    font-family: 'gilroy-medium';
+}
+.transfers .box.activation-mobile .qr-code h2{
+    padding-top: 10px;
+}
+.transfers .table-title h2{
+    font-family: "gilroy-bold";
+}
+.transfers .validate-documents .custom-btn{
+   margin-top: 19px;
+}
+.transfers .activation-mobile .app-icon{
+  margin: 0px 12px;
+}
+/* transfers */
+
+/* Admin Dashboard */
+.admin-db .danger-circled{
+    background: #e7004c21;
+}
+.admin-db .withdrawal-table span{
+    font-size: 16px;
+}
+.admin-db .withdrawal-table .row:not(:first-child){
+    padding: 7px 0px;
+}
+.admin-db .withdrawal-table .header-row{
+     padding-bottom: 19px;
+}
+.admin-db .date-select{
+    border:none;
+    background: none;
+    font-family: "gilroy-semibold";
+}
+
+/* Admin Dashboard */
+
+/* Admin Main BOT */
+
+.admin-main-bot .botgle-bot-form label{
+    font-size: 10px;
+    color: #9B9B9B;
+}
+.admin-main-bot .botgle-bot-form  input ,.admin-main-bot .botgle-bot-form  label{
+    padding: 7px 9px;
+}
+.admin-main-bot .botgle-bot-form  input{
+   background: #FBFCFF;
+   border: 1px solid #F3F3F3;
+   height: 60px;
+}
+.admin-main-bot .botgle-bot-form .form-group{
+    margin-bottom: 0px;
+}
+.admin-main-bot .botgle-bot-form  label{
+    position: absolute;
+    top: 0px;
+}
+.admin-main-bot .botgle-bot-form .custom-btn{
+    padding: 14px 20px;
+    font-size: 22px;
+    border-radius: 5px;
+    font-family: "gilroy-regular";
+}
+.admin-main-bot .first-row-box .box{
+    min-height: 164px;
+}
+.admin-main-bot .withdrawal-table .custom-btn{
+    padding:6px 19px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+.admin-main-bot .withdrawal-table .user span{
+    text-decoration: underline;
+}
+.admin-main-bot .id-trade span{
+    color: #9B9B9B;
+}
+.admin-main-bot .id-trade span{
+    color: #9B9B9B;
+}
+.admin-main-bot .operation-type span{
+    color: #9B9B9B;
+}
+.admin-main-bot .destination span{
+    color: #9B9B9B;
+}
+.admin-main-bot .date span{
+    color: #9B9B9B;
+}
+.admin-main-bot .page-item .page-link{
+    color: #9B9B9B !important;
+    border: none !important;
+    background: none;
+    border-radius: 5px !important;
+    font-size: 18px;
+    font-family: "gilroy-medium";
+    padding: 6px 15px;
+}
+.admin-main-bot .page-item.active .page-link{
+    background-color: #54358E;
+    color: #ffffff !important;
+
+}
+.admin-main-bot .withdrawal-table span {
+    font-family: 'gilroy-medium';
+}
+.admin-main-bot input{
+    background: #FAFBFE;
+    max-width: 200px;
+    border: 1px solid #F3F3F3;
+    border-radius: 10px;
+    padding: 13px 24px;
+}
+.admin-main-bot .operations .input-wrapper{
+    position: relative;
+}
+.admin-main-bot .operations .input-wrapper input::placeholder{
+    color: #9B9B9B;
+}
+.admin-main-bot .operations .input-wrapper i{
+    position: absolute;
+    top: 18px;
+    left: 6px;
+    color: #9B9B9B;
+}
+.admin-main-bot .operations .input-wrapper{
+    padding-bottom: 22px;
+}
+
+/* Admin Main BOT */
+
+/* Botgle Arbitration */
+.botgle-arbitration .withdrawal-table .user span{
+    text-decoration: none;
+}
+/* Botgle Arbitration */
+
+/* Wallet and Withdrawals */
+
+.wallet-n-withdrawals .code{
+    padding-top: 36px;
+    padding-bottom: 32px;
+}
+.wallet-n-withdrawals .box{
+    min-height: auto !important;
+}
+.wallet-n-withdrawals select{
+    background:none;
+    border: none;
+}
+.wallet-n-withdrawals .box h2{
+    white-space: normal;
+}
+
+/* Wallet and Withdrawals */
+    
+/* Main Content */
+
+
+/* Media Queries */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1441px) {
+    .top-nav ul li:first-child {
+        padding-left: 25px;
+    }
+    .top-nav ul {
+        padding-left: 25px;
+    }
+    .top-nav .switch-wrap {
+        padding-right: 48px !important;
+    }
+    .top-nav .nav-icons-spacing {
+        margin-right: 24px;
+    }
+    .top-nav ul li {
+        font-size: 16px;
+    }
+    .sidenav {
+        width: 249px;
+    }
+    .main {
+        margin-left: 270px;
+    }
+    .main.home-content .box.first-row-box{
+        max-width: 362px;
+        margin-left: auto;
+    }
+    .home-content .box p{
+        white-space: nowrap;
+    }
+    .bot-page .box {
+        min-height: auto;
+    }
+    .bot-page .operation-detail-title h2{
+        font-size: 24px;
+        padding-bottom: 35px;
+    }
+    .bot-page .details-of-operation h2{
+      white-space: normal;
+    }
+    .bot-page .details-of-operation h2.heading-one{
+        padding-top: 12px;
+    }
+    .bot-page .details-of-operation h2{
+        padding-bottom: 21px;
+        font-family: "gilroy-bold";
+    }
+    .transfers .box-margin{
+        margin-bottom: 0px;
+    }
+    .admin-main-bot .withdrawal-table span{
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+    body h2 {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    body h3{
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .sidenav a {
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+    .top-nav ul li {
+        font-size: 10px;
+        padding: 0px 6px;
+    }
+    .main {
+        margin-left: 270px;
+    }
+    .box h2{
+        white-space: normal;
+    }
+    .box span {
+        font-size: 12px;
+    }
+    .main.home-content .circled-percentage{
+        margin: auto;
+    }
+    .home-content .box.best-operation h3 {
+        font-size: 20px;
+    }
+    .home-content .box.best-operation .your-profit-btc{
+        font-size: 11px;
+    }
+    .box.top-five-exchange-buy {
+        padding-bottom: 44px;
+    }
+    .box{
+        min-height: 100%;
+    }
+    .home-content .box .btc-value {
+        white-space: nowrap;
+    }
+    .main.home-content .box .code {
+        padding-top: 40px;
+        padding-bottom: 35px;
+    }
+    .main.refferal-link-page .refferal-content  .currency-select-dropdown .dropdown-menu a{
+        padding: 4px 26px;
+        font-size: 16px;
+    }
+    .run-trade .box span {
+        font-size: 12px;
+        font-family: "gilroy-regular";
+    }
+     .my-trades .box span {
+        font-size: 14px;
+    }
+    .withdrawals-page .box{
+        min-height: 100%;
+    }
+    .withdrawals-page .withdrawal-table span {
+        font-size: 14px;
+    }
+    .withdrawals-page form .request-code a {
+        padding: 10px 16px;
+    }
+    .admin-main-bot .withdrawal-table span {
+        font-size: 12px;
+    }
+    .bot-page .operation-detail-title h2{
+        font-size: 20px;
+        padding-bottom: 35px;
+    }
+    .bot-page .details-of-operation h2{
+      white-space: normal;
+    }
+    .bot-page .details-of-operation h2.heading-one{
+        padding-top: 12px;
+    }
+    .bot-page .details-of-operation h2{
+        padding-bottom: 21px;
+    }
+    .transfers .drag-area {
+        padding: 24px;
+    }
+    .transfers .box .qr-code svg{
+        height: 169px;
+        width: 166px;
+    }
+    .transfers input {
+        width: 180px;
+    }
+    .transfers .box-margin{
+        margin-bottom: 0px;
+    }
+    .admin-db .withdrawal-table span {
+        font-size: 13px;
+    }
+    .admin-db .withdrawal-table .header-row {
+        padding-bottom: 10px;
+    }
+    .admin-db .box h2{
+        white-space: pre;
+    }
+    .admin-db .box .btc-value{
+        white-space: nowrap;
+    }
+    .admin-main-bot .withdrawal-table span {
+        font-size: 10px;
+    }
+    .admin-db .box h2{
+        white-space:normal;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    h2 {
+        font-size: 16px;
+        line-height: 16px;
+    }
+    h3{
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .top-nav .stats {
+        display: flex;
+        flex-wrap: unset;
+    }
+    .sidenav a {
+        padding: 16px 10px;
+        font-size: 14px;
+    }
+    .top-nav ul li {
+        font-size: 13px;
+        padding: 0px 6px;
+    }
+    .main {
+        margin-left: 270px;
+    }
+    .box h2{
+        white-space: normal;
+    }
+    .box span {
+        font-size: 12px;
+    }
+    .main.home-content .circled-percentage{
+        margin: auto;
+    }
+    .home-content .box.best-operation h3 {
+        font-size: 20px;
+    }
+    .home-content .box.best-operation .your-profit-btc{
+        font-size: 11px;
+    }
+    .home-content .box.capital-n-profit {
+        padding-bottom: 68px;
+        min-height: 100%;
+    }
+    .home-content .box p{
+        white-space: nowrap;
+    }
+    .main.home-content .box .code {
+        padding-top: 18px;
+        padding-bottom: 6px;
+    }
+    .box.top-five-exchange-sell {
+        min-height: 100%;
+    }
+    .box.top-five-exchange-buy {
+        padding-bottom: 44px;
+    }
+    .box .btc-value {
+        font-size: 13px;
+    }
+    .box .bitcoin-wallet .code {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    .box .qr-code img {
+        width: 86px;
+    }
+    .main.refferal-link-page .refferal-content  .currency-select-dropdown .dropdown-menu a{
+        padding: 4px 26px;
+        font-size: 16px;
+    }
+    .my-trades .box span {
+        font-size: 15px;
+    }
+    .withdrawals-page .withdrawal-table span {
+        font-size: 14px;
+    }
+    .admin-main-bot .withdrawal-table span {
+        font-size: 12px;
+    }
+    .custom-btn {
+        font-size: 14px;
+    }
+    .withdrawals-page .withdrawals{
+        padding-top: 20px;
+    }
+    .bot-page .operation-detail-title h2{
+        font-size: 24px;
+        padding-bottom: 35px;
+    }
+    .bot-page .details-of-operation h2{
+      white-space: normal;
+    }
+    .bot-page .details-of-operation h2{
+        padding-bottom: 21px;
+    }
+    .transfers .drag-area {
+        padding: 24px;
+    }
+    .transfers .box .qr-code svg{
+        height: 80px;
+        width: 80px;
+    }
+    .transfers input {
+        width: 180px;
+    }
+    .admin-main-bot .withdrawal-table .row {
+        width:1400px;
+    }
+    .admin-main-bot .withdrawal-table{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: auto;
+    }
+    .admin-main-bot .botgle-bot-form label {
+        font-size: 9px;
+        color: #9B9B9B;
+    }
+   
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    h1{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .sidenav {
+        margin-left: 0px;
+        margin-top: 0px;
+        width: 50%;
+        z-index: 110;
+        border-radius: 0px 20px 20px 0px;
+    }
+    .sidenav a{
+        padding: 16px;
+    }
+    .main-logo img {
+        margin-right: auto;
+    }
+    .top-nav .dashboard-logo {
+        width: 52px;
+        height: 20px;
+    }
+    .top-nav .btc-stat {
+        display: none;
+    }
+    img#mnbtn {
+        margin-left: auto;
+    }
+    .top-nav .nav-side-items div {
+        padding: 0px 2px;
+    }
+    .top-nav ul li {
+        display: block;
+    }
+    .top-nav .hamburger-icon-wrap img{
+        width:24px;
+        height: 24px;
+    }
+    .top-nav ul {
+        display: block;
+    }
+    .top-nav .stats{
+        display: none;
+    }
+    .box .btc-value {
+        font-size: 16px;
+    }
+    .main .row.mb-4{
+        margin-bottom: 0px !important;
+    }
+    .main .body-area {
+        padding-top: 70px;
+    }
+    .main-profile-avatar-wrap {
+        padding-bottom: 16px;
+    }
+    .main .main-profile-avatar-wrap h1 {
+        line-height: 18px;
+        padding-left: 16px;       
+    }
+    .main .main-profile-avatar-wrap span {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .box{
+        min-height: auto;
+    }
+    .box.best-operation{
+        background: #ffffff;
+    }
+    .box.best-operation h3 {
+        font-size: 36px;
+        font-family: 'gilroy-bold';
+    }
+    .box.best-operation .desc {
+        padding-bottom: 10px;
+    }
+    .box.best-operation h2 {
+        padding-bottom: 29px;
+    }
+    .main .box-margin {
+        margin-bottom: 16px;
+    }
+    .modal-one .modal-dialog{
+        max-width: 315px;
+        margin: auto;
+    }
+    .box.best-operation h3{
+        padding-top: 0px;
+    }
+    .box.best-operation .custom-btn {
+        padding: 12px 26px;
+    }
+    .box.best-operation .your-profit{
+        padding: 17px 0px;
+    }
+    .box.best-operation .your-profit span.badge{
+        padding: 6px 12px;
+        border-radius: 7px;
+    }
+    .modal-one .modal-content {
+        padding: 10px;
+    }
+    .modal-one h1{
+        font-size: 20px;
+    }
+    .modal-one .modal-body h2 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .modal-one h3{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .modal-one p{
+        font-size: 17px;
+    }
+    .modal-one .row .col{
+        padding: 0px;
+    }
+    .modal-one .custom-btn {
+        padding: 13px 22px;
+    }
+    .modal-one .cancel-btn {
+        margin-right: 16px;
+    }
+    .modal-one .percentage-change{
+        padding-bottom: 24px;
+    } 
+    .modal-one .row p {
+        color: #2B2523;
+    }
+    .modal-one .modal-icon {
+        padding: 24px 0px;
+    }
+    .modal-one .modal-icon svg{
+        width: 40px;
+        height: 40px;
+    }
+    .modal-one h3.sell {
+        padding-bottom: 24px;
+    }
+    .main.refferal-link-page .refferal-content  .currency-select-dropdown .dropdown-menu a{
+        padding: 4px 26px;
+        font-size: 16px;
+    }
+    .main.refferal-link-page h2{
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .my-trades .mytrade-table{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: auto;
+        height: 350px;
+    }
+    .my-trades .mytrade-table .row {
+        width: 1000px;
+        padding: 4px 0px;
+    }
+    .my-trades .box span {
+        font-size: 14px;
+    }
+    .my-trades .mytrade-table::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+    }
+    .mytrade-content .mytrade-table h2{
+        font-size: 14px;
+    }
+    .mytrade-content .mytrade-table .currency span {
+        font-size: 18px;
+    }
+    .my-trades .mytrade-table .row {
+        width: 720px;
+    }
+    .modal-two .order-3{
+        padding-left: 0px;
+        padding-top: 24px;
+    }
+    .modal-two .order-2{
+        padding-left: 0px;
+    }
+    .modal-two .order-4{
+        padding-left: 0px;
+        padding-top: 24px;
+    }
+    .modal-two .modal-dialog .modal-content {
+        padding: 16px;
+    }
+    .modal-two .close{
+        display: none;
+    }
+    .withdrawals-page .withdrawals{
+        padding-top: 20px;
+    }
+    .withdrawals-page form .sms-validation {
+        padding-right: 0px;
+    }
+    .withdrawals-page form .email-validation {
+        padding-left: 0px;
+    }
+    .withdrawals-page .withdrawal-table{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: auto;
+    }
+    .withdrawals-page .withdrawal-table .row{
+        width: 760px;
+    }
+    .withdrawals-page .withdrawal-table .currency span {
+        font-size: 18px;
+    }
+    .withdrawals-page .withdrawal-table span {
+        font-size: 14px;
+    }
+    .bot-page .table-title h2 {
+        font-size: 18px;
+    }
+    .bot-page .operation-detail-title h2{
+        font-size: 18px;
+        padding-bottom: 35px;
+    }
+    .bot-page .details-of-operation h2{
+      white-space: normal;
+    }
+    .bot-page .details-of-operation h2{
+        padding-bottom: 21px;
+    }
+    .bot-page .details-of-operation h2.heading-one {
+        padding-bottom: 58px;
+    }
+    .transfers .drag-area {
+        padding: 24px;
+    }
+    .transfers .user-profile .row:not(:first-child) {
+        padding: 10px 0px;
+    }
+    .transfers .activation-email h2 ,   .transfers .activation-mobile h2{
+        padding-bottom: 9px;
+    }
+    .transfers .qr-code svg{
+        width: 90px;
+        height: 90px;
+    }
+    .transfers .user-profile .custom-btn {
+        margin-top: 20px;
+    }
+    .admin-main-bot .withdrawal-table .row {
+        width:1400px;
+    }
+    .admin-main-bot .withdrawal-table{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: auto;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 767.98px) {
+    h1{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .sidenav {
+        margin-left: 0px;
+        margin-top: 0px;
+        width: 245px;
+        z-index: 110;
+        border-radius: 0px 20px 20px 0px;
+    }
+    .sidenav a{
+        padding: 16px;
+    }
+    .main-logo img {
+        margin-right: auto;
+    }
+    .top-nav .dashboard-logo {
+        width: 52px;
+        height: 20px;
+    }
+    .top-nav .btc-stat {
+        display: none;
+    }
+    img#mnbtn {
+        margin-left: auto;
+    }
+    .top-nav .nav-side-items div {
+        padding: 0px 2px;
+    }
+    .top-nav ul li {
+        display: block;
+    }
+    .top-nav .hamburger-icon-wrap img{
+        width:24px;
+        height: 24px;
+    }
+    .top-nav ul {
+        display: block;
+    }
+    .box .btc-value {
+        font-size: 16px;
+    }
+    .main .row.mb-4{
+        margin-bottom: 0px !important;
+    }
+    .main .body-area {
+        padding-top: 70px;
+    }
+    .main-profile-avatar-wrap {
+        padding-bottom: 16px;
+    }
+    .main .main-profile-avatar-wrap h1 {
+        line-height: 18px;
+        padding-left: 16px;       
+    }
+    .main .main-profile-avatar-wrap span {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .box{
+        min-height: auto;
+    }
+    .box.best-operation{
+        background: #ffffff;
+    }
+    .box.best-operation h3 {
+        font-size: 36px;
+        font-family: 'gilroy-bold';
+    }
+    .box.best-operation .desc {
+        padding-bottom: 10px;
+    }
+    .box.best-operation h2 {
+        padding-bottom: 29px;
+    }
+    .main .box-margin {
+        margin-bottom: 16px;
+    }
+    .modal-one .modal-dialog{
+        max-width: 315px;
+        margin: auto;
+    }
+    .box.best-operation h3{
+        padding-top: 0px;
+    }
+    .box.best-operation .custom-btn {
+        padding: 12px 26px;
+    }
+    .box.best-operation .your-profit{
+        padding: 17px 0px;
+    }
+    .box.best-operation .your-profit span.badge{
+        padding: 6px 12px;
+        border-radius: 7px;
+    }
+    .modal-one .modal-content {
+        padding: 10px;
+    }
+    .modal-one h1{
+        font-size: 20px;
+    }
+    .modal-one .modal-body h2 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .modal-one h3{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .modal-one p{
+        font-size: 17px;
+    }
+    .modal-one .row .col{
+        padding: 0px;
+    }
+    .modal-one .custom-btn {
+        padding: 13px 22px;
+    }
+    .modal-one .cancel-btn {
+        margin-right: 16px;
+    }
+    .modal-one .percentage-change{
+        padding-bottom: 24px;
+    } 
+    .modal-one .row p {
+        color: #2B2523;
+    }
+    .modal-one .modal-icon {
+        padding: 24px 0px;
+    }
+    .modal-one .modal-icon svg{
+        width: 40px;
+        height: 40px;
+    }
+    .modal-one h3.sell {
+        padding-bottom: 24px;
+    }
+    .main.refferal-link-page .refferal-content  .currency-select-dropdown .dropdown-menu a{
+        padding: 4px 26px;
+        font-size: 16px;
+    }
+    .main.refferal-link-page h2{
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .my-trades .mytrade-table{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: auto;
+        height: 350px;
+    }
+    .my-trades .mytrade-table .row {
+        width: 1000px;
+        padding: 4px 0px;
+    }
+    .my-trades .box span {
+        font-size: 14px;
+    }
+    .my-trades .mytrade-table::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+    }
+    .mytrade-content .mytrade-table h2{
+        font-size: 14px;
+    }
+    .mytrade-content .mytrade-table .currency span {
+        font-size: 18px;
+    }
+    .my-trades .mytrade-table .row {
+        width: 720px;
+    }
+    .modal-two .order-3{
+        padding-left: 0px;
+        padding-top: 24px;
+    }
+    .modal-two .order-2{
+        padding-left: 0px;
+    }
+    .modal-two .order-4{
+        padding-left: 0px;
+        padding-top: 24px;
+    }
+    .modal-two .modal-dialog .modal-content {
+        padding: 16px;
+    }
+    .modal-two .close{
+        display: none;
+    }
+    .withdrawals-page .withdrawals{
+        padding-top: 20px;
+    }
+    .withdrawals-page form .sms-validation {
+        padding-right: 0px;
+    }
+    .withdrawals-page form .email-validation {
+        padding-left: 0px;
+    }
+    .withdrawal-table{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: auto;
+    }
+    .withdrawal-table .row{
+        width: 760px;
+    }
+    .withdrawals-page .withdrawal-table .currency span {
+        font-size: 18px;
+    }
+    .withdrawals-page .withdrawal-table span {
+        font-size: 14px;
+    }
+    .bot-page .table-title h2 {
+        font-size: 18px;
+    }
+    .bot-page .operation-detail-title h2{
+        font-size: 18px;
+        padding-bottom: 35px;
+    }
+    .bot-page .details-of-operation h2{
+      white-space: normal;
+    }
+    .bot-page .details-of-operation h2{
+        padding-bottom: 21px;
+    }
+    .bot-page .details-of-operation h2.heading-one {
+        padding-bottom: 58px;
+    }
+    .transfers .drag-area {
+        padding: 24px;
+    }
+    .transfers .user-profile .row:not(:first-child) {
+        padding: 10px 0px;
+    }
+    .transfers .activation-email h2 ,   .transfers .activation-mobile h2{
+        padding-bottom: 9px;
+    }
+    .transfers .qr-code svg{
+        width: 90px;
+        height: 90px;
+    }
+    .transfers .user-profile .custom-btn {
+        margin-top: 20px;
+    }
+    .admin-main-bot .botgle-bot-form input {
+        margin-bottom: 10px;
+    }
+    .admin-main-bot .botgle-bot-form label{
+        font-size: 14px;
+    }
+    .admin-main-bot .withdrawal-table .row {
+        width:1400px;
+    }
+    .admin-main-bot .withdrawal-table span {
+        font-size: 14px;
+    }
+    .admin-main-bot .withdrawal-table .box h2{
+        font-size: 16px;
+    }
+    .admin-main-bot .withdrawal-table .row:not(:first-child) {
+        padding: 2px 0px;
+    }
+    .admin-main-bot .first-row-box .box {
+        min-height: 100%;
+    }
+    .admin-main-bot .operations .table-title h2{
+        padding-bottom: 20px;
+    }
+    .admin-main-bot .operations input{
+        max-width:100% ;
+    }
+        
+}
+@media only screen and (max-width: 320px){
+    .modal-one .modal-dialog {
+        max-width: 286px;
+        margin: auto;
+    }
+    .modal-one p {
+        font-size: 16px;
+    }
+    .run-trade .box span {
+        font-size: 14px;
+    }
+    .box.best-operation h3 {
+        font-size: 30px;
+    }
+    .transfers .table-title h2 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+
+/* Media Queries */
