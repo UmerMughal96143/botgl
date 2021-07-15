@@ -3,7 +3,7 @@ import React from "react";
 const RunTrade = () => {
   return (
     <>
-      {/* <!------------------ Content -------------------> */}\
+      {/* <!------------------ Content -------------------> */}
       <div className="main run-trade">
         <div className="container-fluid">
           <div className="row body-area mb-4">

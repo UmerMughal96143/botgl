@@ -393,11 +393,11 @@ span.badge {
     padding-bottom: 30px;
 }
 .box .qr-code {
-    width: 100px;
+    width: 169px;
     margin-left: auto;
 }
 .box .qr-code img {
-    width: 100px;
+    width: 100%;
 }
 .box .btc-danger {
     background: #fb6167;
