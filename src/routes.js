@@ -20,6 +20,7 @@ const Transfers = lazy(() => import("./screens/User/Transfers"));
 
 const Routes = withRouter(({location}) => {
     const [pathname , setPathName] = useState(null)
+    console.log("🚀 ~ file: routes.js ~ line 23 ~ Routes ~ pathname", pathname)
     console.log(location)
     useEffect(() => {
         if(location.pathname){
@@ -28,12 +29,11 @@ const Routes = withRouter(({location}) => {
     },[location.pathname])
     return (
       <Fragment>
-        <Router>
           <Suspense fallback={<div>Loading...</div>}>
-          { location.pathname == "/bot" ||
-            location.pathname == "/arbitration" ||
-            location.pathname == "/walletwithdrawals" ||
-            location.pathname == "/dashboard" ?  <AdminSidebar /> : (
+          { pathname == "/bot" ||
+            pathname == "/arbitration" ||
+            pathname == "/walletwithdrawals" ||
+            pathname == "/dashboard" ?  <AdminSidebar /> : (
               <UserSidebar/> 
           )}
             <Header />
@@ -54,7 +54,6 @@ const Routes = withRouter(({location}) => {
               </Switch>
             <Footer />
           </Suspense>
-        </Router>
       </Fragment>
     );
   })
