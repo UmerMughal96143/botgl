@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const UserSidebar = () => {
   return (
@@ -12,7 +13,7 @@ const UserSidebar = () => {
         >
           &times;
         </button>
-        <a href="home.html">
+        <Link to="/dashboard">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -38,8 +39,8 @@ const UserSidebar = () => {
             />
           </svg>
           Dashboard
-        </a>
-        <a href="runtrade.html" className="active">
+        </Link>
+        <Link to="/runtrade" className="active">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -112,8 +113,8 @@ const UserSidebar = () => {
             />
           </svg>{" "}
           Run Trade
-        </a>
-        <a href="my-trades.html">
+        </Link>
+        <a href="/mytrades">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -166,7 +167,7 @@ const UserSidebar = () => {
           </svg>
           My Trades
         </a>
-        <a href="my-bot.html">
+        <Link to="/mybot">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -180,8 +181,8 @@ const UserSidebar = () => {
             />
           </svg>
           My BOT
-        </a>
-        <a href="refferal-link.html">
+        </Link>
+        <a href="/referrallink">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -226,7 +227,7 @@ const UserSidebar = () => {
           </svg>
           Financial Activities
         </a>
-        <a href="withdrawals.html">
+        <Link to="/withdrawals">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -240,8 +241,8 @@ const UserSidebar = () => {
             />
           </svg>
           Withdrawals
-        </a>
-        <a href="transfers.html">
+        </Link>
+        <Link to="/transfers">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -255,7 +256,7 @@ const UserSidebar = () => {
             />
           </svg>
           Transfers
-        </a>
+        </Link>
         <button className="btn account-btn custom-btn d-block d-sm-block d-md-block d-lg-none d-xl-none">
           My Account
         </button>

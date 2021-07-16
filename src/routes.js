@@ -2,6 +2,7 @@ import React, { Fragment, Suspense, lazy } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch, useLocation, withRouter } from "react-router-dom";
+import UserSidebar from "./components/UserSidebar";
 const AdminSidebar = lazy(() => import("./components/AdminSidebar"));
 const Footer = lazy(() => import("./components/Footer"));
 const Header = lazy(() => import("./components/Header"));
@@ -29,17 +30,23 @@ const Routes = withRouter(({location}) => {
       <Fragment>
         <Router>
           <Suspense fallback={<div>Loading...</div>}>
+          { location.pathname == "/bot" ||
+            location.pathname == "/arbitration" ||
+            location.pathname == "/walletwithdrawals" ||
+            location.pathname == "/dashboard" ?  <AdminSidebar /> : (
+              <UserSidebar/> 
+          )}
             <Header />
-            <AdminSidebar/> 
+             
             {/* {location.pathname == "/dashboard"  ? <AdminSidebar/> : null } */}
               <Switch>
-                  <Route exact path="/" component={Bot} />
+                  <Route exact path="/" component={Home} />
+                  <Route path="/bot" component={Bot} />
                   <Route path="/dashboard" component={Dashboard} />
                   <Route path="/arbitration" component={Arbitration} />
                   <Route path="/walletwithdrawals" component={WalletWithdrawals} />
                   <Route path="/runtrade" component={RunTrade} />
                   <Route path="/mybot" component={Mybot} />
-                  <Route path="/home" component={Home} />
                   <Route path="/referrallink" component={ReferralLink} />
                   <Route path="/withdrawals" component={Withdrawals} />
                   <Route path="/mytrades" component={MyTrades} />
